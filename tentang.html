@@ -11,13 +11,22 @@
 </head>
 <body>
 
-  <header class="site-header">
+ <header class="site-header">
     <div class="container nav-wrapper">
       <a href="index.html" class="logo">SIMORG</a>
-      <nav aria-label="Navigasi utama">
+
+      <!-- TOMBOL HAMBURGER (BARU) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- NAV DIBERI ID (BARU) -->
+      <nav id="navMenu" aria-label="Navigasi utama">
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Beranda</a></li>
-          <li><a href="tentang.html" class="nav-link active">Tentang</a></li>
+          <li><a href="index.html" class="nav-link active">Beranda</a></li>
+          <li><a href="tentang.html" class="nav-link">Tentang</a></li>
           <li><a href="katalog.html" class="nav-link">Katalog</a></li>
           <li><a href="kontak.html" class="nav-link">Kontak</a></li>
         </ul>

@@ -9,6 +9,38 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+   /* ---------- BONUS 1: MENU HAMBURGER MOBILE ---------- */
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      navMenu.classList.toggle('open');
+      navToggle.classList.toggle('open');
+      const isOpen = navMenu.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Tutup menu saat salah satu link diklik (biar tidak nyangkut)
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Tutup menu saat layar di-resize ke desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 600) {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+   
   /* ---------- BONUS 3: FILTER KATALOG ---------- */
   const filterSelect = document.getElementById('filterKategori');
   const catalogGrid = document.getElementById('catalogGrid');

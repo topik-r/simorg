@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMORG — Katalog Program Kerja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">SIMORG</a>
+      <nav aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+          <li><a href="katalog.html" class="nav-link active">Katalog</a></li>
+          <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="page-title">Program Kerja &amp; Modul SIMORG</h1>
+        <p class="section-text">Berikut adalah modul sistem dan program kerja yang sedang kami kembangkan pada periode 2026.</p>
+
+        <div class="filter-bar">
+          <label for="filterKategori">Filter kategori:</label>
+          <select id="filterKategori">
+            <option value="semua">Semua</option>
+            <option value="Modul Inti">Modul Inti</option>
+            <option value="Program Kerja">Program Kerja</option>
+            <option value="Pelatihan">Pelatihan</option>
+          </select>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid">
+          <article class="catalog-card" data-kategori="Modul Inti">
+            <img src="img/modul-keanggotaan.jpg" alt="Kartu Modul Keanggotaan SIMORG" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Modul Keanggotaan</h3>
+              <p>CRUD anggota, status aktif, upload KTM, dan presensi rapat terpusat.</p>
+              <p class="catalog-meta">Modul Inti &bull; Q1 2026</p>
+            </div>
+          </article>
+          <article class="catalog-card" data-kategori="Modul Inti">
+            <img src="img/modul-kegiatan.jpg" alt="Kartu Modul Kegiatan SIMORG" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Modul Kegiatan</h3>
+              <p>Kalender program kerja dan manajemen tugas per divisi.</p>
+              <p class="catalog-meta">Modul Inti &bull; Q1 2026</p>
+            </div>
+          </article>
+          <article class="catalog-card" data-kategori="Modul Inti">
+            <img src="img/modul-keuangan.jpg" alt="Kartu Modul Keuangan SIMORG" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Modul Keuangan</h3>
+              <p>Pencatatan kas masuk/keluar, upload bukti, dan laporan otomatis.</p>
+              <p class="catalog-meta">Modul Inti &bull; Q1 2026</p>
+            </div>
+          </article>
+          <article class="catalog-card" data-kategori="Modul Inti">
+            <img src="img/modul-persuratan.jpg" alt="Kartu Modul Persuratan SIMORG" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Modul Persuratan &amp; Arsip</h3>
+              <p>Template surat otomatis, penomoran unik, dan arsip proposal/LPJ digital.</p>
+              <p class="catalog-meta">Modul Inti &bull; Q2 2026</p>
+            </div>
+          </article>
+          <article class="catalog-card" data-kategori="Modul Inti">
+            <img src="img/modul-dashboard.jpg" alt="Kartu Modul Dashboard SIMORG" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Dashboard Evaluasi</h3>
+              <p>Grafik keaktifan anggota, saldo kas, dan agenda kegiatan mendatang.</p>
+              <p class="catalog-meta">Modul Inti &bull; Q2 2026</p>
+            </div>
+          </article>
+          <article class="catalog-card" data-kategori="Program Kerja">
+            <img src="img/proker-sosialisasi.jpg" alt="Kartu Sosialisasi SIMORG ke UKM" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Sosialisasi ke UKM</h3>
+              <p>Pengenalan SIMORG kepada seluruh Unit Kegiatan Mahasiswa kampus.</p>
+              <p class="catalog-meta">Program Kerja &bull; Maret 2026</p>
+            </div>
+          </article>
+          <article class="catalog-card" data-kategori="Pelatihan">
+            <img src="img/proker-pelatihan.jpg" alt="Kartu Pelatihan Pengurus SIMORG" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Pelatihan Pengurus</h3>
+              <p>Workshop penggunaan SIMORG untuk sekretaris dan bendahara organisasi.</p>
+              <p class="catalog-meta">Pelatihan &bull; April 2026</p>
+            </div>
+          </article>
+          <article class="catalog-card" data-kategori="Program Kerja">
+            <img src="img/proker-workshop.jpg" alt="Kartu Workshop Digitalisasi Organisasi" class="catalog-img">
+            <div class="catalog-body">
+              <h3>Workshop Digitalisasi</h3>
+              <p>Pelatihan tata kelola organisasi digital untuk pengurus BEM dan Hima.</p>
+              <p class="catalog-meta">Program Kerja &bull; Mei 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 SIMORG — Sistem Informasi Manajemen Organisasi Mahasiswa</p>
+      <p>Dibuat untuk UTS Pemrograman Web Dasar</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

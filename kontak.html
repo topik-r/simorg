@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMORG — Kontak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">SIMORG</a>
+      <nav aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+          <li><a href="katalog.html" class="nav-link">Katalog</a></li>
+          <li><a href="kontak.html" class="nav-link active">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="page-title">Hubungi Kami</h1>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2 class="section-title">Informasi Kontak</h2>
+            <p><strong>Alamat:</strong><br>Sekretariat SIMORG, Gedung Organisasi Mahasiswa, Kampus Universitas Contoh, Jl. Pendidikan No. 1, Kota Contoh 12345</p>
+            <p><strong>Email:</strong> <a href="mailto:simorg@kampus.ac.id">simorg@kampus.ac.id</a></p>
+            <p><strong>Instagram:</strong> <a href="https://instagram.com" target="_blank" rel="noopener">@simorg.kampus</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com" target="_blank" rel="noopener">github.com/simorg</a></p>
+
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.1947413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnNDEuMSJTIDEwNsKwNDknMTAuNCJF!5e0!3m2!1sid!2sid!4v1700000000000"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Peta lokasi Sekretariat SIMORG">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h2 class="section-title">Formulir Kontak</h2>
+            <form id="contactForm" action="#" method="post" novalidate>
+              <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                <span class="error-msg" id="errorNama"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="nama@email.com">
+                <span class="error-msg" id="errorEmail"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="telepon">Nomor HP</label>
+                <input type="tel" id="telepon" name="telepon" required pattern="[0-9]{10,13}" placeholder="081234567890">
+                <span class="error-msg" id="errorTelepon"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="topik">Topik</label>
+                <select id="topik" name="topik" required>
+                  <option value="">-- Pilih Topik --</option>
+                  <option value="Keanggotaan">Keanggotaan</option>
+                  <option value="Keuangan">Keuangan</option>
+                  <option value="Persuratan">Persuratan</option>
+                  <option value="Kerja Sama">Kerja Sama</option>
+                </select>
+                <span class="error-msg" id="errorTopik"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" name="pesan" rows="5" required minlength="10" maxlength="500" placeholder="Tulis pesan Anda (10-500 karakter)"></textarea>
+                <span class="error-msg" id="errorPesan"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+              <p class="success-msg" id="successMsg"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 SIMORG — Sistem Informasi Manajemen Organisasi Mahasiswa</p>
+      <p>Dibuat untuk UTS Pemrograman Web Dasar</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
